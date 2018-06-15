@@ -1,0 +1,53 @@
+#main {
+	display: flex;
+}
+li {
+	position: relative;
+	background: red;
+}
+#main li:hover {
+	background: #f6f66f;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: #404040;
+	font: 18px/1 Roboto, sans-serif;
+	transition: 0.3s;
+	padding: 7px 10px;
+
+}
+#main ul {
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+}
+#main ul li {
+	width: 200px;
+}
+#main ul ul {
+	top:0;
+	left:100%
+}
+#main li:hover > ul {
+	display:block
+}
+@media (max-width: 800px) {
+	  #main {
+    flex-direction: column;
+  }
+  ul ul{
+    width: 100%;
+  }
+  #main ul {
+    position: relative;
+  }
+  #main ul ul {
+  	position: relative;
+    left: 0;
+  }
+  #main ul li {
+    width: 100%;
+  }
+}
